@@ -1,1 +1,18 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="mainMenu" side="right">
+    <ion-header>
+        <member-profile-short></member-profile-short>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="changeLanguage()">
+                <span class="fa fa-language fa-x" item-left></span>
+                {{"LANGUAGE" | translate }}&nbsp;(<language-display></language-display>)
+            </button>
+            <button ion-item>
+                My app menu 2 click without done
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav #mainMenu [root]="rootPage"></ion-nav>
