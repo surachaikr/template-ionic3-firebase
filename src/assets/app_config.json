@@ -1,5 +1,5 @@
 {
-    "APP_VERSION": "1.3.0",
+    "APP_VERSION": "0.0.2",
     "APP_NAME": "Template",
     "DATA_PATH": "assets/data",
     "STORAGE_MEMBER_PROFILE": "memberProfile",

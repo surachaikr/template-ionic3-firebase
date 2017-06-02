@@ -1,26 +1,32 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# TemplateIonic3Firebase
 
 ## How to use this template
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/driftyco/ionic2-app-base).
+*This template can run on web with service worker and android. If you would like to run on ios, please add platform ios before.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/driftyco/ionic2-app-base).
+Please take care a service worker setting at browser development tool because it make a cache your transplied code.
 
 ### With the Ionic CLI:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+If you do the first load, please run commands as below:
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ npm install
+$ ionic cordova prepare android
+$ ionic cordova prepare browser
+$ ionic start
 ```
 
-Then, to run it, cd into `myBlank` and run:
+Then, to run it, cd into `TemplateIonic3Firebase` and run:
 
+```bash
+$ ionic serve
+or
+$ ionic cordova run android
+```
+
+If you would like to run on ios, please add platform
 ```bash
 $ ionic cordova platform add ios
 $ ionic cordova run ios
 ```
-
-Substitute ios for android if not on a Mac.
-
