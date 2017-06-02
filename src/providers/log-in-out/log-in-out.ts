@@ -34,6 +34,7 @@ export class LogInOutProvider {
   }
 
   public saveMemberProfile(memberProfile: MemberProfile) {
+    //save to storage and database
     return new Promise(resolve => {
       if (!memberProfile.createdDate) {
         memberProfile.createdDate = new Date().getTime();

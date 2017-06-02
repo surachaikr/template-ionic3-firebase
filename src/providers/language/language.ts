@@ -38,9 +38,6 @@ export class LanguageProvider {
 
       Base._events.subscribe('changeLanguageEvent', () => {
         this.changeLanguage().then((result) => {
-          //save member profile
-
-          window.location.reload();
         });
       });
 
@@ -65,7 +62,7 @@ export class LanguageProvider {
       Base._translateService.use(LanguageProvider.LANGUAGE_AVAILABLE[index]);
       Base._memberProfile.language = LanguageProvider.LANGUAGE_AVAILABLE[index];
       this.logInOutProvider.saveMemberProfile(Base._memberProfile).then(() => {
-          resolve(true);
+        resolve(true);
       });
     });
   }
@@ -81,7 +78,7 @@ export class LanguageProvider {
       Base._translateService.use(userLang);
       Base._memberProfile.language = Base._translateService.currentLang;
       this.logInOutProvider.saveMemberProfile(Base._memberProfile).then(() => {
-          resolve(true);
+        resolve(true);
       });
     });
   }
