@@ -1,11 +1,11 @@
 import { FormControl } from '@angular/forms';
-import { Http } from '@angular/http';
+import { HttpClient} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Base } from './base';
 //import { Log } from './log';
 
-export function createTranslateLoader(http: Http) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+export function createTranslateLoader(httpClient: HttpClient) {
+    return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
 
 export class ValidatorUtil {

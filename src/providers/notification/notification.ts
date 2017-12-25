@@ -89,7 +89,8 @@ private log: Log = Log.getLog('NotificationProvider');
             });
 
             messaging.onMessage(payload => {
-                this.log.debug('Message received. ' + payload.data.welcome + '->' + JSON.stringify(payload));
+                let pl: any = payload;
+                this.log.debug('Message received. ' + pl.data.welcome + '->' + JSON.stringify(pl));
             });
 
         }).catch(err => {
